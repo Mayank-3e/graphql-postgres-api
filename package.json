@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "@apollo/server": "^4.7.1",
-    "graphql": "^16.6.0"
+    "@prisma/client": "^4.15.0",
+    "graphql": "^16.6.0",
+    "prisma": "^4.15.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22",
