@@ -1,10 +1,11 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from '@apollo/server/standalone';
 import typeDefs from "./src/schema";
-import { Query } from "./src/resolvers"
+import { Query,Mutation } from "./src/resolvers"
 
 const resolvers = {
-  Query
+  Query,
+  Mutation
 };
 
 const server = new ApolloServer({
