@@ -1,6 +1,6 @@
 const typeDefs = `#graphql
   type Query {
-    hello: String
+    posts: [Post]!
   }
   type Mutation{
     postCreate(title: String!,content: String!): Int!

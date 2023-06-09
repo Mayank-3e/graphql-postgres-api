@@ -1,4 +1,11 @@
+import prisma from "../../prisma/db"
+
 export const Query=
 {
-  hello: () => 'world',
+  posts: ()=>
+  {
+    return prisma.post.findMany({
+      orderBy: [{createdAt: 'desc'}]
+    })
+  }
 }
