@@ -3,8 +3,10 @@ const typeDefs = `#graphql
     posts: [Post]!
   }
   type Mutation{
+    # returning post ids
     postCreate(title: String!,content: String!): Int!
-    postUpdate(postId: ID!,title: String,content: String): Int! #status
+    postUpdate(postId: ID!,title: String,content: String): Int!
+    postDelete(postId: ID!): Int!
   }
   type Post{
     id: ID!

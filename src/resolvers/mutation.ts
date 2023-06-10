@@ -32,5 +32,14 @@ export const Mutation=
       data
     })
     return post.id
+  },
+  postDelete: async(_:any, args:{postId:string}): Promise<number> =>
+  {
+    const {postId}=args
+    const post=await prisma.post.findUniqueOrThrow({
+      where: {id: Number(postId)}
+    })
+    await prisma.post.delete({where: {id: Number(postId)}})
+    return post.id
   }
 }
