@@ -4,6 +4,7 @@ const typeDefs = `#graphql
   }
   type Mutation{
     postCreate(title: String!,content: String!): Int!
+    postUpdate(postId: ID!,title: String,content: String): Int! #status
   }
   type Post{
     id: ID!
