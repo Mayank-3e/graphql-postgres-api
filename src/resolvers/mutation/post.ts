@@ -1,6 +1,6 @@
-import prisma from "../../prisma/db"
+import prisma from "@/prisma/db"
 
-export const Mutation=
+const postResolvers=
 {
   postCreate: async(_:any, args:{title: string,content: string}):
   Promise<number> =>
@@ -43,3 +43,4 @@ export const Mutation=
     return post.id
   }
 }
+export default postResolvers

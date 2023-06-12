@@ -7,6 +7,7 @@ const typeDefs = `#graphql
     postCreate(title: String!,content: String!): Int!
     postUpdate(postId: ID!,title: String,content: String): Int!
     postDelete(postId: ID!): Int!
+    signup(email:String!,name:String!,password:String!,bio:String!): String!
   }
   type Post{
     id: ID!
