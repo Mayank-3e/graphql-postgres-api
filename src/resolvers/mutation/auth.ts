@@ -1,4 +1,5 @@
 import prisma from "@/prisma/db"
+import validator from 'validator';
 
 const authResolvers=
 {
@@ -6,6 +7,7 @@ const authResolvers=
   {
     const {name,email,password}=args
     const user=await prisma.user.create({data: {name,email,password}})
+    console.log(validator.isEmail(email));
     return user.id
   }
 }
